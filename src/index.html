@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Advinhe o Termo Bíblico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="game-container">
+        <h1>Advinhe o Termo Bíblico</h1>
+        
+        <div id="board-container">
+            <div id="board" aria-live="polite" role="group" style="font-size: 16px;">
+                <!-- Aqui vão os elementos do tabuleiro -->
+            </div>
+        </div>
+        
+        <div id="word-container">
+            <input type="text" id="guess" placeholder="Digite o termo bíblico" />
+        </div>
+        
+        <div id="controls">
+            <button id="send" onclick="guess();">Enviar</button>
+        </div>
+        
+        <div id="alerts"></div>
+        <div id="tries"></div>
+        <div id="screen"></div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>

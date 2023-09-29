@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* CORPO DA PÁGINA */
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(49, 49, 49);
+    color: rgb(224, 224, 224);
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/* TELA DO JOGO */
+#game-container {
+    width: 35%;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* CABEÇALHO DA TELA DO JOGO */
+h1, #word-container, #controls, #alerts, #tries, #screen {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16pt;
+    box-sizing: border-box;
+    margin: 0.2em;
+}
+
+/* TÍTULO DO JOGO */
+#title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 13px;
+    margin: 0;
+    font-size: 20pt;
+}
+
+/* INPUT DE PALPITE */
+#guess {
+    width: 80%;
+    padding: 10px;
+    font-size: 14pt;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* BOTÃO ENVIAR */
+#send {
+    padding: 10px 20px;
+    font-size: 14pt;
+    cursor: pointer;
+    background-color: #3AA394;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#send:hover {
+    background-color: #218838;
+}
+
+/* ALERTAS */
+#alerts {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* TENTATIVAS */
+#tries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.newTry {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+}
+
+.correctTry {
+    background-color: #4CAF50;
+}
+
+
+/* TABULEIRO DO JOGO */
+#board, #board-container, #wc-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1em;
+    font-size: 120px;
+}
+
+/* CÉLULA DO TABULEIRO */
+.cell, .letter {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(32, 32, 32);
+    border: 2px solid rgb(224, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24pt;
+    font-weight: bold;
+    aspect-ratio: 1;
+    border-radius: 10%;
+    font-size: 0.55em; /* Ajustado para manter a proporção da letra dentro da célula */
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+/* BOTÃO DE REINICIAR E OUTROS BOTÕES */
+#reset, button {
+    background-color: transparent;
+    color: rgb(224, 224, 224);
+    border: 2px solid rgb(224, 224, 224);
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16pt;
+    background-color: #3AA394;
+}
+
+/* AO PASSAR O MOUSE POR CIMA DOS BOTÕES */
+#reset:hover, button:hover {
+    background-color: rgb(61, 61, 61);
+    background: #218838;
+}
+
+/* ESTILOS ADICIONAIS */
+/* Aqui você pode adicionar outros estilos e animações conforme necessário */
